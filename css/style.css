@@ -9,14 +9,270 @@
 /* using colors */
 :root {
     --primary: #E6533C;
+    --white: rgb(255, 255, 255);
+    --normal-text: rgba(255, 255, 255, 0.5);
 }
 
 /* default styles */
+.btn-primary {
+    border-radius: 42px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    padding: 16px 40px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    border: 1px solid var(--white);
+    background-color: transparent;
+    border-radius: 42px;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px 40px;
+    cursor: pointer;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .inter-font {
     font-family: "Inter", sans-serif;
 }
 
-header h1 {
-    font-family: "Miama";
+/* header styles */
+
+header {
+    background: linear-gradient(180deg, rgb(17, 17, 17), rgba(119, 119, 119, 0.9) 100%);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 57px;
+}
+
+header nav .nav-brand {
     color: var(--primary);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+header nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 39px;
+}
+
+header nav .nav-items .nav-item {
+    list-style: none;
+}
+
+header nav .phone-menu {
+    color: var(--white);
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+header nav .nav-items .nav-item .nav-link.active {
+    background: var(--primary);
+    margin: 4px 0 4px 4px;
+
+}
+
+header nav .nav-items .nav-item .nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    display: inline-block;
+    border-radius: 46px;
+    margin: 8px 0;
+}
+
+/* banner section styles */
+header .container .banner {
+    display: flex;
+    align-items: center;
+    gap: 4.375rem;
+    margin-top: 4rem;
+}
+
+header .container .banner .banner-content {
+    width: 50%;
+}
+
+header .container .banner .banner-content h1 {
+    color: var(--white);
+    font-size: 4.875rem;
+    line-height: 88px;
+    font-weight: 900;
+    margin-bottom: 1.75rem;
+}
+
+header .container .banner .banner-content h1 span {
+    font-family: "Miama";
+    font-weight: 400;
+}
+
+header .container .banner .banner-content p {
+    color: var(--normal-text);
+    letter-spacing: 0.5px;
+}
+
+header .container .banner .banner-content .banner-button-box {
+    display: flex;
+    gap: 0.9rem;
+    margin-top: 1.75rem;
+}
+
+header .container .banner .banner-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .container .banner .banner-image .free-workout-videos {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 16px 24px;
+}
+
+header .container .banner .banner-image .free-workout-videos h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 3px;
+}
+
+header .container .banner .banner-image .free-workout-videos p {
+    color: var(--normal-text);
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+}
+
+header .container .banner .banner-image .video-tutorials {
+    position: absolute;
+    bottom: 12%;
+    left: -10%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 16px 24px;
+}
+
+header .container .banner .banner-image .video-tutorials .tutorial-count {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .container .banner .banner-image .video-tutorials .tutorial-count .play-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 100%;
+    color: var(--white);
+}
+
+header .container .banner .banner-image .video-tutorials h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: 3px;
+}
+
+header .container .banner .banner-image .video-tutorials p {
+    color: var(--normal-text);
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+}
+
+/* mobile screen */
+@media screen and (max-width: 576px) {
+
+    /* common style */
+    .btn-primary {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    .btn-secondary {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+
+    /* header styles*/
+    header nav .nav-items {
+        display: none;
+    }
+
+    header nav .phone-menu {
+        display: block;
+    }
+
+    header .container .banner {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    header .container .banner .banner-content,
+    header .container .banner .banner-image {
+        width: 100%;
+    }
+
+    header .container .banner .banner-content h1 {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+
+    header .container .banner .banner-image .free-workout-videos {
+        padding: 8px 12px;
+        top: 10%;
+        right: 3%;
+    }
+
+    header .container .banner .banner-image .video-tutorials {
+        padding: 8px 12px;
+        bottom: 40%;
+        left: 5%;
+    }
+
+    header .container .banner .banner-image .free-workout-videos h3,
+    header .container .banner .banner-image .video-tutorials h3 {
+        font-size: 1.875rem;
+    }
+
+    header .container .banner .banner-image .free-workout-videos p,
+    header .container .banner .banner-image .video-tutorials p {
+        font-size: 0.563rem;
+    }
+
+
 }
