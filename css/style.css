@@ -11,9 +11,24 @@
     --primary: #E6533C;
     --white: rgb(255, 255, 255);
     --normal-text: rgba(255, 255, 255, 0.5);
+    --black: #000;
 }
 
 /* default styles */
+.section-title {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 0.9rem;
+}
+
+.section-desc {
+    color: var(--normal-text);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
 .btn-primary {
     border-radius: 42px;
     background: var(--primary);
@@ -214,10 +229,55 @@ header .container .banner .banner-image .video-tutorials p {
     letter-spacing: 1px;
 }
 
+/* main section styles */
+main {
+    background: var(--black);
+}
+.change-your-habits{
+    padding: 100px 0;
+}
+.change-your-habits .container .content {
+    text-align: center;
+    margin-bottom: 58px;
+}
+
+.change-your-habits .container .habit-items {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.change-your-habits .container .habit-items .item {
+    text-align: center;
+}
+
+.change-your-habits .container .habit-items .item img {
+    border-radius: 100%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.8rem;
+}
+
+.change-your-habits .container .habit-items .item h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 6px;
+}
+
+.change-your-habits .container .habit-items .item p {
+    color: var(--normal-text);
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+}
+
 /* mobile screen */
 @media screen and (max-width: 576px) {
 
     /* common style */
+    .section-title{
+        font-size: 2rem;
+    }
     .btn-primary {
         padding: 8px 20px;
         font-size: 16px;
@@ -272,6 +332,12 @@ header .container .banner .banner-image .video-tutorials p {
     header .container .banner .banner-image .free-workout-videos p,
     header .container .banner .banner-image .video-tutorials p {
         font-size: 0.563rem;
+    }
+    .change-your-habits{
+        padding: 50px 0;
+    }
+    .change-your-habits .container .habit-items{
+        grid-template-columns: 1fr;
     }
 
 
