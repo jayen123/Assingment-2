@@ -233,9 +233,11 @@ header .container .banner .banner-image .video-tutorials p {
 main {
     background: var(--black);
 }
-.change-your-habits{
+
+.change-your-habits {
     padding: 100px 0;
 }
+
 .change-your-habits .container .content {
     text-align: center;
     margin-bottom: 58px;
@@ -271,13 +273,34 @@ main {
     line-height: 1.1rem;
 }
 
+/* run extra miles styles */
+.run-extra-mile .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+    background: rgb(34, 34, 34);
+    border-radius: 18px;
+    padding: 30px 30px 30px 50px;
+}
+
+.run-extra-mile .container .content .btn-primary {
+    margin-top: 35px;
+}
+
+.run-extra-mile .container .image-box img {
+    width: 100%;
+    border-radius: 18px;
+}
+
 /* mobile screen */
 @media screen and (max-width: 576px) {
 
     /* common style */
-    .section-title{
+    .section-title {
         font-size: 2rem;
     }
+
     .btn-primary {
         padding: 8px 20px;
         font-size: 16px;
@@ -333,11 +356,23 @@ main {
     header .container .banner .banner-image .video-tutorials p {
         font-size: 0.563rem;
     }
-    .change-your-habits{
+
+    .change-your-habits {
         padding: 50px 0;
     }
-    .change-your-habits .container .habit-items{
+
+    .change-your-habits .container .habit-items,
+    .run-extra-mile .container {
         grid-template-columns: 1fr;
+    }
+
+    .run-extra-mile .container {
+        padding: 30px;
+    }
+
+    .run-extra-mile .container .content .btn-primary {
+        width: 100%;
+        padding: 16px 40px;
     }
 
 
