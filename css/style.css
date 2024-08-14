@@ -424,8 +424,46 @@ select {
     font-size: 16px;
     line-height: 22px;
 }
-.bmi-calculator .calculator-form .container form button.btn-primary{
+
+.bmi-calculator .calculator-form .container form button.btn-primary {
     margin-top: 35px;
+}
+
+/* gallery section styles */
+.gallery {
+    padding-bottom: 100px;
+}
+
+.gallery .container .content {
+    padding: 50px 0;
+}
+
+.gallery .container .row-1 {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    gap: 20px;
+}
+
+.gallery .container .row-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery .container .row-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery .container .image-card {
+    margin-bottom: 20px;
+}
+
+.gallery .container .image-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 /* footer styles */
@@ -575,24 +613,30 @@ footer .container div.text-center span {
     .run-extra-mile .container,
     .meet-our-team .container .our-team,
     footer .container .top-box,
-    .bmi-calculator .calculator-form .container {
+    .bmi-calculator .calculator-form .container,
+    .gallery .container .row-1,
+    .gallery .container .row-2,
+    .gallery .container .row-3 {
         grid-template-columns: 1fr;
     }
+
 
     .run-extra-mile .container {
         padding: 30px;
     }
 
     .run-extra-mile .container .content .btn-primary,
-     {
-        width: 100%;
-        padding: 16px 40px;
-    }
-    .bmi-calculator .calculator-form .container form button.btn-primary{
-        padding: 16px 40px;
-    }
-    .bmi-calculator .content{
-        padding: 40px 0;
-    }
+    {
+    width: 100%;
+    padding: 16px 40px;
+}
+
+.bmi-calculator .calculator-form .container form button.btn-primary {
+    padding: 16px 40px;
+}
+
+.bmi-calculator .content {
+    padding: 40px 0;
+}
 
 }
