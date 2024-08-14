@@ -334,6 +334,100 @@ main {
     color: var(--normal-text);
 }
 
+/* bmi calculator */
+.bmi-calculator .content {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.bmi-calculator .calculator-form {
+    background-color: rgb(34, 34, 34);
+}
+
+.bmi-calculator .calculator-form .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 50px 0;
+    gap: 40px;
+}
+
+.bmi-calculator .calculator-form .container h3 {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 120%;
+}
+
+.bmi-calculator .calculator-form .container p {
+    margin-top: 14px;
+}
+
+.bmi-calculator .calculator-form .container table {
+    margin-top: 50px;
+}
+
+.bmi-calculator .calculator-form .container table th {
+    color: var(--white);
+    text-align: left;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 13px 18px;
+    border-collapse: collapse;
+    color: var(--normal-text);
+}
+
+.bmi-calculator .calculator-form .container form {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 12px;
+}
+
+.bmi-calculator .calculator-form .container form .row-1 {
+    display: flex;
+    gap: 12px;
+}
+
+.bmi-calculator .calculator-form .container form .row-1 input {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 40px 12px 20px;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.bmi-calculator .calculator-form .container form .row-2 {
+    display: flex;
+    gap: 12px;
+}
+
+.bmi-calculator .calculator-form .container form .row-2 input,
+select {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 40px 12px 20px;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 22px;
+}
+.bmi-calculator .calculator-form .container form button.btn-primary{
+    margin-top: 35px;
+}
+
 /* footer styles */
 footer {
     background: rgb(34, 34, 34);
@@ -480,7 +574,8 @@ footer .container div.text-center span {
     .change-your-habits .container .habit-items,
     .run-extra-mile .container,
     .meet-our-team .container .our-team,
-    footer .container .top-box {
+    footer .container .top-box,
+    .bmi-calculator .calculator-form .container {
         grid-template-columns: 1fr;
     }
 
@@ -488,10 +583,16 @@ footer .container div.text-center span {
         padding: 30px;
     }
 
-    .run-extra-mile .container .content .btn-primary {
+    .run-extra-mile .container .content .btn-primary,
+     {
         width: 100%;
         padding: 16px 40px;
     }
-
+    .bmi-calculator .calculator-form .container form button.btn-primary{
+        padding: 16px 40px;
+    }
+    .bmi-calculator .content{
+        padding: 40px 0;
+    }
 
 }
